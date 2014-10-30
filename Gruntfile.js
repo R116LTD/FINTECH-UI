@@ -71,9 +71,9 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9999,
+        port: 80,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '192.168.1.13',
+        hostname: 'dev-finemsys-ui.elasticbeanstalk.com',
         livereload: 35729
       },
       livereload: {
