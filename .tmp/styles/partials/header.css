@@ -2,24 +2,22 @@
 Error: Undefined mixin 'box-shadow'.
         on line 6 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss, in `box-shadow'
         from line 6 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss
-        from line 1 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/main-web.scss
 
-1: @import "partials/header.scss";
-2: @import "partials/forms.scss";
-3: 
-4: body {
-5:   // background: $body-web url(../images/background-pattern.png);
-6:   background: $background-web;
-7:   // border-top:10px solid $primary-color;
-8:   font-family: $font-family;
-9: }
-10: .login-box {
-11:   padding: $grid-gutter-width*2 $grid-gutter-width/3 $grid-gutter-width/3 $grid-gutter-width/3;
+1: nav {
+2:   @extend .navbar;
+3:   @extend .navbar-default;
+4:   @extend .navbar-fixed-top;
+5:   background: white;
+6:   @include box-shadow(0 1px 2px 0px rgba(0,0,0,0.10));
+7: 
+8:   // NAVBAR HEADER
+9:   .navbar-header {
+10:     margin-right: $grid-gutter-width/2;
+11:     margin-left: $grid-gutter-width/2;
 
 Backtrace:
 /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss:6:in `box-shadow'
 /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss:6
-/Users/Aadesh/Projects/FINTECH-UI/app/styles/main-web.scss:1
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:338:in `visit_mixin'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:98:in `with_mixin'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
@@ -37,20 +35,6 @@ Backtrace:
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `visit_rule'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `send'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
@@ -93,4 +77,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'box-shadow'.\A         on line 6 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss, in `box-shadow'\A         from line 6 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss\A         from line 1 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/main-web.scss\A \A 1: @import \"partials/header.scss\";\A 2: @import \"partials/forms.scss\";\A 3: \A 4: body {\A 5:   // background: $body-web url(../images/background-pattern.png);\A 6:   background: $background-web;\A 7:   // border-top:10px solid $primary-color;\A 8:   font-family: $font-family;\A 9: }\A 10: .login-box {\A 11:   padding: $grid-gutter-width*2 $grid-gutter-width/3 $grid-gutter-width/3 $grid-gutter-width/3;"; }
+  content: "Error: Undefined mixin 'box-shadow'.\A         on line 6 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss, in `box-shadow'\A         from line 6 of /Users/Aadesh/Projects/FINTECH-UI/app/styles/partials/header.scss\A \A 1: nav {\A 2:   @extend .navbar;\A 3:   @extend .navbar-default;\A 4:   @extend .navbar-fixed-top;\A 5:   background: white;\A 6:   @include box-shadow(0 1px 2px 0px rgba(0,0,0,0.10));\A 7: \A 8:   // NAVBAR HEADER\A 9:   .navbar-header {\A 10:     margin-right: $grid-gutter-width/2;\A 11:     margin-left: $grid-gutter-width/2;"; }

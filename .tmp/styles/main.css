@@ -128,6 +128,7 @@ figure {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_normalize\.scss}line{font-family:\00003209}}
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -211,6 +212,8 @@ input[type="number"]::-webkit-outer-spin-button {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_normalize\.scss}line{font-family:\00003355}}
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -329,7 +332,7 @@ th {
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_print\.scss}line{font-family:\0000372}}
-  .navbar {
+  .navbar, nav {
     display: none;
   }
 
@@ -1381,12 +1384,16 @@ th {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000311}}
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000314}}
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1462,6 +1469,8 @@ img {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   width: 100% \9;
@@ -1850,17 +1859,17 @@ dd {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
-.dl-horizontal dd:before, .dl-horizontal dd:after {
+.dl-horizontal dd:before, .summary .horizontal dd:before, .dl-horizontal dd:after, .summary .horizontal dd:after {
   content: " ";
   display: table;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
-.dl-horizontal dd:after {
+.dl-horizontal dd:after, .summary .horizontal dd:after {
   clear: both;
 }
 @media (min-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_type\.scss}line{font-family:\00003211}}
-  .dl-horizontal dt {
+  .dl-horizontal dt, .summary .horizontal dt {
     float: left;
     width: 160px;
     clear: left;
@@ -1870,7 +1879,7 @@ dd {
     white-space: nowrap;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_type\.scss}line{font-family:\00003218}}
-  .dl-horizontal dd {
+  .dl-horizontal dd, .summary .horizontal dd {
     margin-left: 180px;
   }
 }
@@ -3432,6 +3441,8 @@ label {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_forms\.scss}line{font-family:\0000347}}
 input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -3491,13 +3502,17 @@ output {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000353}}
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_vendor-prefixes\.scss}line{font-family:\00003102}}
@@ -3790,11 +3805,13 @@ select[multiple].input-lg,
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000317}}
 .has-success .form-control {
   border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000320}}
 .has-success .form-control:focus {
   border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000327}}
@@ -3820,11 +3837,13 @@ select[multiple].input-lg,
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000317}}
 .has-warning .form-control {
   border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000320}}
 .has-warning .form-control:focus {
   border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000327}}
@@ -3850,11 +3869,13 @@ select[multiple].input-lg,
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000317}}
 .has-error .form-control {
   border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000320}}
 .has-error .form-control:focus {
   border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_forms\.scss}line{font-family:\0000327}}
@@ -4033,6 +4054,7 @@ select[multiple].input-lg,
 .btn:active, .btn.active {
   outline: 0;
   background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000343}}
@@ -4041,6 +4063,7 @@ select[multiple].input-lg,
   pointer-events: none;
   opacity: 0.65;
   filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -4216,6 +4239,7 @@ select[multiple].input-lg,
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000391}}
 .btn-link, .btn-link:active, .btn-link[disabled], fieldset[disabled] .btn-link {
   background-color: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000398}}
@@ -4279,6 +4303,8 @@ input[type="button"].btn-block {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_component-animations\.scss}line{font-family:\0000310}}
 .fade {
   opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_component-animations\.scss}line{font-family:\0000313}}
@@ -4310,6 +4336,8 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
 
@@ -4353,6 +4381,7 @@ tbody.collapse.in {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
@@ -4607,10 +4636,12 @@ tbody.collapse.in {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_button-groups\.scss}line{font-family:\00003119}}
 .btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_button-groups\.scss}line{font-family:\00003123}}
 .btn-group.open .dropdown-toggle.btn-link {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -4868,61 +4899,61 @@ tbody.collapse.in {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\000039}}
-.nav {
+.nav, .shortcuts ul {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
-.nav:before, .nav:after {
+.nav:before, .shortcuts ul:before, .nav:after, .shortcuts ul:after {
   content: " ";
   display: table;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
-.nav:after {
+.nav:after, .shortcuts ul:after {
   clear: both;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000315}}
-.nav > li {
+.nav > li, .shortcuts ul > li {
   position: relative;
   display: block;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000319}}
-.nav > li > a {
+.nav > li > a, .shortcuts ul > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000323}}
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:hover, .shortcuts ul > li > a:hover, .nav > li > a:focus, .shortcuts ul > li > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000331}}
-.nav > li.disabled > a {
+.nav > li.disabled > a, .shortcuts ul > li.disabled > a {
   color: #777777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000334}}
-.nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
+.nav > li.disabled > a:hover, .shortcuts ul > li.disabled > a:hover, .nav > li.disabled > a:focus, .shortcuts ul > li.disabled > a:focus {
   color: #777777;
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000346}}
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+.nav .open > a, .shortcuts ul .open > a, .nav .open > a:hover, .shortcuts ul .open > a:hover, .nav .open > a:focus, .shortcuts ul .open > a:focus {
   background-color: #eeeeee;
   border-color: #428bca;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000359}}
-.nav .nav-divider {
+.nav .nav-divider, .shortcuts ul .nav-divider {
   height: 1px;
   margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000366}}
-.nav > li > a > img {
+.nav > li > a > img, .shortcuts ul > li > a > img {
   max-width: none;
 }
 
@@ -4956,19 +4987,19 @@ tbody.collapse.in {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003118}}
-.nav-pills > li {
+.nav-pills > li, .shortcuts ul > li {
   float: left;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003122}}
-.nav-pills > li > a {
+.nav-pills > li > a, .shortcuts ul > li > a {
   border-radius: 4px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003125}}
-.nav-pills > li + li {
+.nav-pills > li + li, .shortcuts ul > li + li {
   margin-left: 2px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003131}}
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+.nav-pills > li.active > a, .shortcuts ul > li.active > a, .nav-pills > li.active > a:hover, .shortcuts ul > li.active > a:hover, .nav-pills > li.active > a:focus, .shortcuts ul > li.active > a:focus {
   color: #fff;
   background-color: #428bca;
 }
@@ -5063,24 +5094,24 @@ tbody.collapse.in {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\0000311}}
-.navbar {
+.navbar, nav {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
-.navbar:before, .navbar:after {
+.navbar:before, nav:before, .navbar:after, nav:after {
   content: " ";
   display: table;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
-.navbar:after {
+.navbar:after, nav:after {
   clear: both;
 }
 @media (min-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\0000311}}
-  .navbar {
+  .navbar, nav {
     border-radius: 4px;
   }
 }
@@ -5142,20 +5173,20 @@ tbody.collapse.in {
     overflow-y: visible;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\0000381}}
-  .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+  .navbar-fixed-top .navbar-collapse, nav .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\0000392}}
-.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-top .navbar-collapse, nav .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 340px;
 }
 @media (max-width: 480px) and (orientation: landscape) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\0000392}}
-  .navbar-fixed-top .navbar-collapse,
+  .navbar-fixed-top .navbar-collapse, nav .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
   }
@@ -5193,7 +5224,7 @@ tbody.collapse.in {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003138}}
-.navbar-fixed-top,
+.navbar-fixed-top, nav,
 .navbar-fixed-bottom {
   position: fixed;
   right: 0;
@@ -5204,14 +5235,14 @@ tbody.collapse.in {
 }
 @media (min-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003138}}
-  .navbar-fixed-top,
+  .navbar-fixed-top, nav,
   .navbar-fixed-bottom {
     border-radius: 0;
   }
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003151}}
-.navbar-fixed-top {
+.navbar-fixed-top, nav {
   top: 0;
   border-width: 0 0 1px;
 }
@@ -5237,7 +5268,7 @@ tbody.collapse.in {
 }
 @media (min-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003177}}
-  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  .navbar > .container .navbar-brand, nav > .container .navbar-brand, .navbar > .container-fluid .navbar-brand, nav > .container-fluid .navbar-brand {
     margin-left: -15px;
   }
 }
@@ -5351,6 +5382,7 @@ tbody.collapse.in {
   padding: 10px 15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 8px;
   margin-bottom: 8px;
@@ -5370,6 +5402,7 @@ tbody.collapse.in {
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003335}}
@@ -5426,103 +5459,104 @@ tbody.collapse.in {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003394}}
-.navbar-default {
+.navbar-default, nav {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003398}}
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand, nav .navbar-brand {
   color: #777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003400}}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+.navbar-default .navbar-brand:hover, nav .navbar-brand:hover, .navbar-default .navbar-brand:focus, nav .navbar-brand:focus {
   color: #5e5e5e;
   background-color: transparent;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003407}}
-.navbar-default .navbar-text {
+.navbar-default .navbar-text, nav .navbar-text {
   color: #777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003412}}
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a, nav .navbar-nav > li > a {
   color: #777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003415}}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover, nav .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, nav .navbar-nav > li > a:focus {
   color: #333;
   background-color: transparent;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003422}}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a, nav .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, nav .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, nav .navbar-nav > .active > a:focus {
   color: #555;
   background-color: #e7e7e7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003430}}
-.navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
+.navbar-default .navbar-nav > .disabled > a, nav .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, nav .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus, nav .navbar-nav > .disabled > a:focus {
   color: #ccc;
   background-color: transparent;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003439}}
-.navbar-default .navbar-toggle {
+.navbar-default .navbar-toggle, nav .navbar-toggle {
   border-color: #ddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003441}}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+.navbar-default .navbar-toggle:hover, nav .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, nav .navbar-toggle:focus {
   background-color: #ddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003445}}
-.navbar-default .navbar-toggle .icon-bar {
+.navbar-default .navbar-toggle .icon-bar, nav .navbar-toggle .icon-bar {
   background-color: #888;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003450}}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
+.navbar-default .navbar-collapse, nav .navbar-collapse,
+.navbar-default .navbar-form,
+nav .navbar-form {
   border-color: #e7e7e7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003459}}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a, nav .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, nav .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, nav .navbar-nav > .open > a:focus {
   background-color: #e7e7e7;
   color: #555;
 }
 @media (max-width: 767px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003470}}
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a, nav .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003472}}
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, nav .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, nav .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #333;
     background-color: transparent;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003479}}
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, nav .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, nav .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, nav .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
     background-color: #e7e7e7;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003487}}
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, nav .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, nav .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus, nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #ccc;
     background-color: transparent;
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003503}}
-.navbar-default .navbar-link {
+.navbar-default .navbar-link, nav .navbar-link {
   color: #777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003505}}
-.navbar-default .navbar-link:hover {
+.navbar-default .navbar-link:hover, nav .navbar-link:hover {
   color: #333;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003510}}
-.navbar-default .btn-link {
+.navbar-default .btn-link, nav .btn-link {
   color: #777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003512}}
-.navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
+.navbar-default .btn-link:hover, nav .btn-link:hover, .navbar-default .btn-link:focus, nav .btn-link:focus {
   color: #333;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003518}}
-.navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
+.navbar-default .btn-link[disabled]:hover, nav .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, nav .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] nav .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus, fieldset[disabled] nav .btn-link:focus {
   color: #ccc;
 }
 
@@ -5934,12 +5968,12 @@ a.label:hover, a.label:focus {
   padding: 1px 5px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_badges\.scss}line{font-family:\0000339}}
-a.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
+a.list-group-item.active > .badge, .nav-pills > .active > a > .badge, .shortcuts ul > .active > a > .badge {
   color: #428bca;
   background-color: #fff;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_badges\.scss}line{font-family:\0000344}}
-.nav-pills > li > a > .badge {
+.nav-pills > li > a > .badge, .shortcuts ul > li > a > .badge {
   margin-left: 3px;
 }
 
@@ -6007,6 +6041,8 @@ a.badge:hover, a.badge:focus {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_thumbnails\.scss}line{font-family:\0000317}}
@@ -6118,17 +6154,17 @@ a.thumbnail.active {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_alerts\.scss}line{font-family:\0000366}}
-.alert-danger {
+.alert-danger, .error {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_alerts\.scss}line{font-family:\000038}}
-.alert-danger hr {
+.alert-danger hr, .error hr {
   border-top-color: #e4b9c0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_alerts\.scss}line{font-family:\0000311}}
-.alert-danger .alert-link {
+.alert-danger .alert-link, .error .alert-link {
   color: #843534;
 }
 
@@ -6155,6 +6191,7 @@ a.thumbnail.active {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -6168,13 +6205,18 @@ a.thumbnail.active {
   color: #fff;
   text-align: center;
   background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_progress-bars\.scss}line{font-family:\0000355}}
 .progress-striped .progress-bar,
 .progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
 }
@@ -6183,6 +6225,7 @@ a.thumbnail.active {
 .progress.active .progress-bar,
 .progress-bar.active {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
 }
 
@@ -6205,6 +6248,8 @@ a.thumbnail.active {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -6214,6 +6259,8 @@ a.thumbnail.active {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -6223,6 +6270,8 @@ a.thumbnail.active {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -6232,6 +6281,8 @@ a.thumbnail.active {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -6480,37 +6531,38 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\000037}}
-.panel {
+.panel, .kpis .charts .portlet {
   margin-bottom: 20px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000316}}
-.panel-body {
+.panel-body, .kpis .charts .portlet .body {
   padding: 15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
-.panel-body:before, .panel-body:after {
+.panel-body:before, .kpis .charts .portlet .body:before, .panel-body:after, .kpis .charts .portlet .body:after {
   content: " ";
   display: table;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
-.panel-body:after {
+.panel-body:after, .kpis .charts .portlet .body:after {
   clear: both;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000322}}
-.panel-heading {
+.panel-heading, .kpis .charts .portlet .heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000327}}
-.panel-heading > .dropdown .dropdown-toggle {
+.panel-heading > .dropdown .dropdown-toggle, .kpis .charts .portlet .heading > .dropdown .dropdown-toggle {
   color: inherit;
 }
 
@@ -6536,29 +6588,29 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000359}}
-.panel > .list-group {
+.panel > .list-group, .kpis .charts .portlet > .list-group {
   margin-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000362}}
-.panel > .list-group .list-group-item {
+.panel > .list-group .list-group-item, .kpis .charts .portlet > .list-group .list-group-item {
   border-width: 1px 0;
   border-radius: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000369}}
-.panel > .list-group:first-child .list-group-item:first-child {
+.panel > .list-group:first-child .list-group-item:first-child, .kpis .charts .portlet > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000376}}
-.panel > .list-group:last-child .list-group-item:last-child {
+.panel > .list-group:last-child .list-group-item:last-child, .kpis .charts .portlet > .list-group:last-child .list-group-item:last-child {
   border-bottom: 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000385}}
-.panel-heading + .list-group .list-group-item:first-child {
+.panel-heading + .list-group .list-group-item:first-child, .kpis .charts .portlet .heading + .list-group .list-group-item:first-child {
   border-top-width: 0;
 }
 
@@ -6568,136 +6620,209 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\0000399}}
-.panel > .table,
+.panel > .table, .kpis .charts .portlet > .table,
 .panel > .table-responsive > .table,
-.panel > .panel-collapse > .table {
+.kpis .charts .portlet > .table-responsive > .table,
+.panel > .panel-collapse > .table,
+.kpis .charts .portlet > .panel-collapse > .table {
   margin-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003105}}
-.panel > .table:first-child,
-.panel > .table-responsive:first-child > .table:first-child {
+.panel > .table:first-child, .kpis .charts .portlet > .table:first-child,
+.panel > .table-responsive:first-child > .table:first-child,
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003112}}
-.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.panel > .table:first-child > thead:first-child > tr:first-child td:first-child, .kpis .charts .portlet > .table:first-child > thead:first-child > tr:first-child td:first-child,
 .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.kpis .charts .portlet > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.kpis .charts .portlet > .table:first-child > tbody:first-child > tr:first-child td:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.kpis .charts .portlet > .table:first-child > tbody:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
   border-top-left-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003116}}
-.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.panel > .table:first-child > thead:first-child > tr:first-child td:last-child, .kpis .charts .portlet > .table:first-child > thead:first-child > tr:first-child td:last-child,
 .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.kpis .charts .portlet > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.kpis .charts .portlet > .table:first-child > tbody:first-child > tr:first-child td:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.kpis .charts .portlet > .table:first-child > tbody:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.kpis .charts .portlet > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
   border-top-right-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003124}}
-.panel > .table:last-child,
-.panel > .table-responsive:last-child > .table:last-child {
+.panel > .table:last-child, .kpis .charts .portlet > .table:last-child,
+.panel > .table-responsive:last-child > .table:last-child,
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003131}}
-.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child, .kpis .charts .portlet > .table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.kpis .charts .portlet > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.kpis .charts .portlet > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+.kpis .charts .portlet > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
   border-bottom-left-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003135}}
-.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child, .kpis .charts .portlet > .table:last-child > tbody:last-child > tr:last-child td:last-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.kpis .charts .portlet > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.kpis .charts .portlet > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+.kpis .charts .portlet > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+.kpis .charts .portlet > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
   border-bottom-right-radius: 3px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003142}}
-.panel > .panel-body + .table,
-.panel > .panel-body + .table-responsive {
+.panel > .panel-body + .table, .kpis .charts .portlet > .panel-body + .table, .kpis .charts .portlet .panel > .body + .table, .kpis .charts .portlet > .body + .table,
+.panel > .panel-body + .table-responsive,
+.kpis .charts .portlet > .panel-body + .table-responsive,
+.kpis .charts .portlet .panel > .body + .table-responsive,
+.kpis .charts .portlet > .body + .table-responsive {
   border-top: 1px solid #ddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003146}}
-.panel > .table > tbody:first-child > tr:first-child th,
-.panel > .table > tbody:first-child > tr:first-child td {
+.panel > .table > tbody:first-child > tr:first-child th, .kpis .charts .portlet > .table > tbody:first-child > tr:first-child th,
+.panel > .table > tbody:first-child > tr:first-child td,
+.kpis .charts .portlet > .table > tbody:first-child > tr:first-child td {
   border-top: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003150}}
-.panel > .table-bordered,
-.panel > .table-responsive > .table-bordered {
+.panel > .table-bordered, .kpis .charts .portlet > .table-bordered,
+.panel > .table-responsive > .table-bordered,
+.kpis .charts .portlet > .table-responsive > .table-bordered {
   border: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003157}}
-.panel > .table-bordered > thead > tr > th:first-child,
+.panel > .table-bordered > thead > tr > th:first-child, .kpis .charts .portlet > .table-bordered > thead > tr > th:first-child,
 .panel > .table-bordered > thead > tr > td:first-child,
+.kpis .charts .portlet > .table-bordered > thead > tr > td:first-child,
 .panel > .table-bordered > tbody > tr > th:first-child,
+.kpis .charts .portlet > .table-bordered > tbody > tr > th:first-child,
 .panel > .table-bordered > tbody > tr > td:first-child,
+.kpis .charts .portlet > .table-bordered > tbody > tr > td:first-child,
 .panel > .table-bordered > tfoot > tr > th:first-child,
+.kpis .charts .portlet > .table-bordered > tfoot > tr > th:first-child,
 .panel > .table-bordered > tfoot > tr > td:first-child,
+.kpis .charts .portlet > .table-bordered > tfoot > tr > td:first-child,
 .panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > thead > tr > th:first-child,
 .panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > thead > tr > td:first-child,
 .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr > th:first-child,
 .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr > td:first-child,
 .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+.kpis .charts .portlet > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
   border-left: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003161}}
-.panel > .table-bordered > thead > tr > th:last-child,
+.panel > .table-bordered > thead > tr > th:last-child, .kpis .charts .portlet > .table-bordered > thead > tr > th:last-child,
 .panel > .table-bordered > thead > tr > td:last-child,
+.kpis .charts .portlet > .table-bordered > thead > tr > td:last-child,
 .panel > .table-bordered > tbody > tr > th:last-child,
+.kpis .charts .portlet > .table-bordered > tbody > tr > th:last-child,
 .panel > .table-bordered > tbody > tr > td:last-child,
+.kpis .charts .portlet > .table-bordered > tbody > tr > td:last-child,
 .panel > .table-bordered > tfoot > tr > th:last-child,
+.kpis .charts .portlet > .table-bordered > tfoot > tr > th:last-child,
 .panel > .table-bordered > tfoot > tr > td:last-child,
+.kpis .charts .portlet > .table-bordered > tfoot > tr > td:last-child,
 .panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > thead > tr > th:last-child,
 .panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > thead > tr > td:last-child,
 .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr > th:last-child,
 .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr > td:last-child,
 .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+.kpis .charts .portlet > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
   border-right: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003170}}
-.panel > .table-bordered > thead > tr:first-child > td,
+.panel > .table-bordered > thead > tr:first-child > td, .kpis .charts .portlet > .table-bordered > thead > tr:first-child > td,
 .panel > .table-bordered > thead > tr:first-child > th,
+.kpis .charts .portlet > .table-bordered > thead > tr:first-child > th,
 .panel > .table-bordered > tbody > tr:first-child > td,
+.kpis .charts .portlet > .table-bordered > tbody > tr:first-child > td,
 .panel > .table-bordered > tbody > tr:first-child > th,
+.kpis .charts .portlet > .table-bordered > tbody > tr:first-child > th,
 .panel > .table-responsive > .table-bordered > thead > tr:first-child > td,
+.kpis .charts .portlet > .table-responsive > .table-bordered > thead > tr:first-child > td,
 .panel > .table-responsive > .table-bordered > thead > tr:first-child > th,
+.kpis .charts .portlet > .table-responsive > .table-bordered > thead > tr:first-child > th,
 .panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,
-.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr:first-child > td,
+.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr:first-child > th {
   border-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003179}}
-.panel > .table-bordered > tbody > tr:last-child > td,
+.panel > .table-bordered > tbody > tr:last-child > td, .kpis .charts .portlet > .table-bordered > tbody > tr:last-child > td,
 .panel > .table-bordered > tbody > tr:last-child > th,
+.kpis .charts .portlet > .table-bordered > tbody > tr:last-child > th,
 .panel > .table-bordered > tfoot > tr:last-child > td,
+.kpis .charts .portlet > .table-bordered > tfoot > tr:last-child > td,
 .panel > .table-bordered > tfoot > tr:last-child > th,
+.kpis .charts .portlet > .table-bordered > tfoot > tr:last-child > th,
 .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr:last-child > td,
 .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tbody > tr:last-child > th,
 .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
-.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
+.kpis .charts .portlet > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+.kpis .charts .portlet > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
   border-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003186}}
-.panel > .table-responsive {
+.panel > .table-responsive, .kpis .charts .portlet > .table-responsive {
   border: 0;
   margin-bottom: 0;
 }
@@ -6707,20 +6832,20 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   margin-bottom: 20px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003202}}
-.panel-group .panel {
+.panel-group .panel, .panel-group .kpis .charts .portlet, .kpis .charts .panel-group .portlet {
   margin-bottom: 0;
   border-radius: 4px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003205}}
-.panel-group .panel + .panel {
+.panel-group .panel + .panel, .panel-group .kpis .charts .portlet + .panel, .kpis .charts .panel-group .portlet + .panel, .panel-group .kpis .charts .panel + .portlet, .kpis .charts .panel-group .panel + .portlet, .panel-group .kpis .charts .portlet + .portlet, .kpis .charts .panel-group .portlet + .portlet {
   margin-top: 5px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003210}}
-.panel-group .panel-heading {
+.panel-group .panel-heading, .panel-group .kpis .charts .portlet .heading, .kpis .charts .portlet .panel-group .heading {
   border-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003212}}
-.panel-group .panel-heading + .panel-collapse > .panel-body {
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .kpis .charts .portlet .heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-group .heading + .panel-collapse > .panel-body, .panel-group .kpis .charts .portlet .panel-heading + .panel-collapse > .body, .kpis .charts .portlet .panel-group .panel-heading + .panel-collapse > .body, .panel-group .kpis .charts .portlet .heading + .panel-collapse > .body, .kpis .charts .portlet .panel-group .heading + .panel-collapse > .body {
   border-top: 1px solid #ddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003216}}
@@ -6728,31 +6853,31 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-top: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003218}}
-.panel-group .panel-footer + .panel-collapse .panel-body {
+.panel-group .panel-footer + .panel-collapse .panel-body, .panel-group .panel-footer + .panel-collapse .kpis .charts .portlet .body, .kpis .charts .portlet .panel-group .panel-footer + .panel-collapse .body {
   border-bottom: 1px solid #ddd;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003226}}
-.panel-default {
+.panel-default, .kpis .charts .portlet {
   border-color: #ddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\000036}}
-.panel-default > .panel-heading {
+.panel-default > .panel-heading, .kpis .charts .portlet > .panel-heading, .kpis .charts .portlet .panel-default > .heading, .kpis .charts .portlet > .heading {
   color: #333333;
   background-color: #f5f5f5;
   border-color: #ddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000311}}
-.panel-default > .panel-heading + .panel-collapse > .panel-body {
+.panel-default > .panel-heading + .panel-collapse > .panel-body, .kpis .charts .portlet > .panel-heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-default > .heading + .panel-collapse > .panel-body, .kpis .charts .portlet > .heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-default > .panel-heading + .panel-collapse > .body, .kpis .charts .portlet > .panel-heading + .panel-collapse > .body, .kpis .charts .portlet .panel-default > .heading + .panel-collapse > .body, .kpis .charts .portlet > .heading + .panel-collapse > .body {
   border-top-color: #ddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000314}}
-.panel-default > .panel-heading .badge {
+.panel-default > .panel-heading .badge, .kpis .charts .portlet > .panel-heading .badge, .kpis .charts .portlet .panel-default > .heading .badge, .kpis .charts .portlet > .heading .badge {
   color: #f5f5f5;
   background-color: #333333;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000320}}
-.panel-default > .panel-footer + .panel-collapse > .panel-body {
+.panel-default > .panel-footer + .panel-collapse > .panel-body, .kpis .charts .portlet > .panel-footer + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-default > .panel-footer + .panel-collapse > .body, .kpis .charts .portlet > .panel-footer + .panel-collapse > .body {
   border-bottom-color: #ddd;
 }
 
@@ -6761,22 +6886,22 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-color: #428bca;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\000036}}
-.panel-primary > .panel-heading {
+.panel-primary > .panel-heading, .kpis .charts .portlet .panel-primary > .heading {
   color: #fff;
   background-color: #428bca;
   border-color: #428bca;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000311}}
-.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+.panel-primary > .panel-heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-primary > .heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-primary > .panel-heading + .panel-collapse > .body, .kpis .charts .portlet .panel-primary > .heading + .panel-collapse > .body {
   border-top-color: #428bca;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000314}}
-.panel-primary > .panel-heading .badge {
+.panel-primary > .panel-heading .badge, .kpis .charts .portlet .panel-primary > .heading .badge {
   color: #428bca;
   background-color: #fff;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000320}}
-.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+.panel-primary > .panel-footer + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-primary > .panel-footer + .panel-collapse > .body {
   border-bottom-color: #428bca;
 }
 
@@ -6785,22 +6910,22 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-color: #d6e9c6;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\000036}}
-.panel-success > .panel-heading {
+.panel-success > .panel-heading, .kpis .charts .portlet .panel-success > .heading {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000311}}
-.panel-success > .panel-heading + .panel-collapse > .panel-body {
+.panel-success > .panel-heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-success > .heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-success > .panel-heading + .panel-collapse > .body, .kpis .charts .portlet .panel-success > .heading + .panel-collapse > .body {
   border-top-color: #d6e9c6;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000314}}
-.panel-success > .panel-heading .badge {
+.panel-success > .panel-heading .badge, .kpis .charts .portlet .panel-success > .heading .badge {
   color: #dff0d8;
   background-color: #3c763d;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000320}}
-.panel-success > .panel-footer + .panel-collapse > .panel-body {
+.panel-success > .panel-footer + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-success > .panel-footer + .panel-collapse > .body {
   border-bottom-color: #d6e9c6;
 }
 
@@ -6809,22 +6934,22 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-color: #bce8f1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\000036}}
-.panel-info > .panel-heading {
+.panel-info > .panel-heading, .kpis .charts .portlet .panel-info > .heading {
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000311}}
-.panel-info > .panel-heading + .panel-collapse > .panel-body {
+.panel-info > .panel-heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-info > .heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-info > .panel-heading + .panel-collapse > .body, .kpis .charts .portlet .panel-info > .heading + .panel-collapse > .body {
   border-top-color: #bce8f1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000314}}
-.panel-info > .panel-heading .badge {
+.panel-info > .panel-heading .badge, .kpis .charts .portlet .panel-info > .heading .badge {
   color: #d9edf7;
   background-color: #31708f;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000320}}
-.panel-info > .panel-footer + .panel-collapse > .panel-body {
+.panel-info > .panel-footer + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-info > .panel-footer + .panel-collapse > .body {
   border-bottom-color: #bce8f1;
 }
 
@@ -6833,22 +6958,22 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-color: #faebcc;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\000036}}
-.panel-warning > .panel-heading {
+.panel-warning > .panel-heading, .kpis .charts .portlet .panel-warning > .heading {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000311}}
-.panel-warning > .panel-heading + .panel-collapse > .panel-body {
+.panel-warning > .panel-heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-warning > .heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-warning > .panel-heading + .panel-collapse > .body, .kpis .charts .portlet .panel-warning > .heading + .panel-collapse > .body {
   border-top-color: #faebcc;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000314}}
-.panel-warning > .panel-heading .badge {
+.panel-warning > .panel-heading .badge, .kpis .charts .portlet .panel-warning > .heading .badge {
   color: #fcf8e3;
   background-color: #8a6d3b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000320}}
-.panel-warning > .panel-footer + .panel-collapse > .panel-body {
+.panel-warning > .panel-footer + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-warning > .panel-footer + .panel-collapse > .body {
   border-bottom-color: #faebcc;
 }
 
@@ -6857,22 +6982,22 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-color: #ebccd1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\000036}}
-.panel-danger > .panel-heading {
+.panel-danger > .panel-heading, .kpis .charts .portlet .panel-danger > .heading {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000311}}
-.panel-danger > .panel-heading + .panel-collapse > .panel-body {
+.panel-danger > .panel-heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-danger > .heading + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-danger > .panel-heading + .panel-collapse > .body, .kpis .charts .portlet .panel-danger > .heading + .panel-collapse > .body {
   border-top-color: #ebccd1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000314}}
-.panel-danger > .panel-heading .badge {
+.panel-danger > .panel-heading .badge, .kpis .charts .portlet .panel-danger > .heading .badge {
   color: #f2dede;
   background-color: #a94442;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000320}}
-.panel-danger > .panel-footer + .panel-collapse > .panel-body {
+.panel-danger > .panel-footer + .panel-collapse > .panel-body, .kpis .charts .portlet .panel-danger > .panel-footer + .panel-collapse > .body {
   border-bottom-color: #ebccd1;
 }
 
@@ -6914,6 +7039,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_wells\.scss}line{font-family:\0000315}}
@@ -6985,7 +7111,9 @@ button.close {
 .modal.fade .modal-dialog {
   -webkit-transform: translate3d(0, -25%, 0);
   transform: translate3d(0, -25%, 0);
-  transition: -webkit-transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_modals\.scss}line{font-family:\0000336}}
@@ -7014,6 +7142,7 @@ button.close {
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0;
@@ -7111,6 +7240,7 @@ button.close {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_modals\.scss}line{font-family:\00003140}}
   .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 
@@ -7258,6 +7388,7 @@ button.close {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal;
 }
@@ -7400,6 +7531,8 @@ button.close {
 .carousel-inner > .item {
   display: none;
   position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_carousel\.scss}line{font-family:\0000322}}
@@ -7466,6 +7599,8 @@ button.close {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_carousel\.scss}line{font-family:\0000384}}
 .carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -7474,6 +7609,8 @@ button.close {
 .carousel-control.right {
   left: auto;
   right: 0;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -7960,72 +8097,193 @@ button.close {
     display: none !important;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\000031}}
-body {
-  background: #eaeaea url(../images/background-pattern.png);
-  border-top: 10px solid #E28B00;
-  font-family: Helvetica, Arial, sans-serif;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\000031}}
+nav {
+  background: white;
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\000039}}
+nav .navbar-header {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000313}}
+nav .navbar-header .navbar-brand {
+  margin: 5px 15px 5px 0;
+  width: 48px;
+  height: 54px;
+  background: url("../images/logo-small.png") no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000320}}
+nav .navbar-header .navbar-brand > span {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000326}}
+nav .navbar-nav > li > a {
+  padding: 25px 20px 25px 45px;
+  font-size: 12px;
+  color: #666666;
+  line-height: 14px;
+  background-position: 20px center;
+  background-repeat: no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000335}}
+nav .home {
+  background: url("../images/icon-navbar-home-inactive.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000338}}
+nav .clients {
+  background: url("../images/icon-navbar-clients-inactive.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000341}}
+nav .products {
+  background: url("../images/icon-navbar-products-inactive.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000344}}
+nav .reports {
+  background: url("../images/icon-navbar-reports-inactive.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000347}}
+nav .accounting {
+  background: url("../images/icon-navbar-accounting-inactive.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000350}}
+nav .configuration {
+  background: url("../images/icon-navbar-configuration-inactive.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000353}}
+nav .notifications {
+  background: url("../images/icon-navbar-notifications.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000356}}
+nav .notifications > span {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000359}}
+nav .notifications > strong {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  padding: 3px 5px;
+  background: #E28B00;
+  font-size: 10px;
+  line-height: 15px;
+  border: 100px;
+  font-weight: 500;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000370}}
+nav .user {
+  background: url("../images/icon-navbar-user.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000374}}
+nav .navbar-nav > .active > a {
+  background-color: #E28B00;
+  color: white;
+  background-position: 20px center;
+  background-repeat: no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000381}}
+nav .active > .home {
+  background: url("../images/icon-navbar-home-active.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000384}}
+nav .active > .clients {
+  background: url("../images/icon-navbar-clients-active.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000387}}
+nav .active > .products {
+  background: url("../images/icon-navbar-products-active.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000390}}
+nav .active > .reports {
+  background: url("../images/icon-navbar-reports-active.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000393}}
+nav .active > .accounting {
+  background: url("../images/icon-navbar-accounting-active.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000396}}
+nav .active > .configuration {
+  background: url("../images/icon-navbar-configuration-active.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003101}}
+nav .navbar-form {
+  margin-top: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003104}}
+nav input {
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 1px solid #bfbfbf;
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003113}}
+nav .navbar-right > li > a {
+  margin: 7px;
+  border-left: 1px solid #F2F2F2;
+  border-right: 1px solid #F2F2F2;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003119}}
+nav .navbar-right > li:last-child a {
+  margin: 0;
+  border: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\000036}}
-.login-box {
-  padding: 10px;
-  width: 380px;
-  height: 80%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000316}}
-.login-box legend {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: 100;
-  color: #424242;
-  line-height: 22px;
-  border: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000325}}
-.login-box input {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\000032}}
+input.form-control {
   border-radius: 4px;
   border: 1px solid #CCCCCC;
   height: 45px;
   font-size: 16px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000332}}
-.login-box input[type=text]:focus, .login-box textarea:focus,
-.login-box input[type=password]:focus {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\000039}}
+input[type=text]:focus, textarea:focus,
+input[type=password]:focus {
+  -webkit-box-shadow: 0 0 5px #E28B00;
   box-shadow: 0 0 5px #E28B00;
   outline: 0;
   border-color: #E28B00;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000341}}
-.login-box .btn {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000316}}
+.form-control-feedback {
+  top: 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000321}}
+.btn {
   height: 45px;
   font-size: 16px;
   border: 1px transparent;
   font-weight: 500;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000347}}
-.login-box .btn:active {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000327}}
+.btn:active {
   outline: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000352}}
-.login-box .primary {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000332}}
+.primary {
   background: #449ACC;
-  color: #fff;
+  color: #fff !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000356}}
-.login-box .primary:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000336}}
+.primary:hover {
   background: #6cb0d7;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000344}}
+.error {
+  color: #D0021B;
+  background-color: #FCD4D9;
+  border-color: #fabcc4;
+  font-weight: 100;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000353}}
 ::-webkit-input-placeholder,
 :-moz-placeholder,
 ::-moz-placeholder,
@@ -8035,4 +8293,152 @@ body {
   font-size: 16px;
   color: #CCCCCC;
   line-height: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\000034}}
+body {
+  background: #f8f8f8;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000310}}
+.login-box {
+  padding: 60px 10px 10px 10px;
+  width: 380px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000318}}
+.login-box legend {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 100;
+  color: #424242;
+  line-height: 22px;
+  border: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000328}}
+.post-login {
+  margin-top: 80px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000339}}
+.shortcuts ul > li:last-child a {
+  border-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000344}}
+.shortcuts ul > li + li {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000348}}
+.shortcuts ul > .label,
+.shortcuts ul > li > a {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-right: 1px solid #e8e8e8;
+  border-radius: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000356}}
+.shortcuts ul > .label {
+  padding-left: 20px;
+  color: #E28B00;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 16px;
+  background-image: url("../images/icon-shortcuts.png");
+  background-position: 0px center;
+  background-repeat: no-repeat;
+  border: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000372}}
+.summary {
+  margin: 15px 0;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #F2F2F2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000378}}
+.summary .horizontal {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000382}}
+.summary .horizontal dt {
+  width: auto;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 600;
+  clear: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000389}}
+.summary .horizontal dd {
+  margin-top: 2px;
+  margin-left: 0px;
+  margin-right: 10px;
+  width: 120px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+  padding-right: 25px;
+  border-right: 1px solid #F2F2F2;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003102}}
+.summary dd:last-of-type {
+  border: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003109}}
+.kpis {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
+.kpis:before, .kpis:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
+.kpis:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003112}}
+.kpis .charts {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003112}}
+  .kpis .charts {
+    float: left;
+    width: 50%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003115}}
+.kpis .charts .portlet {
+  border-radius: 0;
+  border-color: #F2F2F2;
+  box-shadow: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003122}}
+.kpis .charts .portlet .heading {
+  border-radius: 0;
+  background: #fff;
+  border-bottom: 0px;
+  font-size: 16px;
+  font-weight: 100;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Projects\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003131}}
+.kpis .charts .portlet .body {
+  border-radius: 0;
+  height: 200px;
 }
