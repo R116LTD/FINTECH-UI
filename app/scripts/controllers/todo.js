@@ -1,13 +1,18 @@
 'use strict';
  
   // Here we attach this controller to our testApp module
-var TodoCtrl = angular.module('todoController',['todoService','Constants'])
+var TodoCtrl = angular.module('todoController',['todoService','Constants', 'GraphUtils'])
   
-TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoService, REST_URL, PAGE_URL, APPLICATION, Session) {
+TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoService, REST_URL, PAGE_URL, APPLICATION, Session, Graph) {
   $scope.username = Session.getValue(APPLICATION.username);
   $scope.getTodos = function(){
     console.log('TodoCtrl : getTodos');
-
+    //Start Dummy Charts
+    $scope.borrowerPerLoanOfficer = Graph.getColumnChart();
+    $scope.PARPerLoanOfficer = Graph.getBarChart();
+    $scope.loanPortfolioCurrentMonth = Graph.getPieChart();
+    $scope.dueVsCollectedLastWeek = Graph.getLineChart();
+    //End Dummy Charts
     TodoService.list(REST_URL.TODO_LIST).then(function(result){
       console.log('Success : Return from todo list service.');
       $scope.todos = result.data.todos;
