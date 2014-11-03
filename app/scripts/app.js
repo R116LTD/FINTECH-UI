@@ -64,14 +64,14 @@ app.run(function ($rootScope, $location, AUTH_EVENTS, AuthService, Session, APPL
 
   //hendled notAuthenticated event
   $rootScope.$on(AUTH_EVENTS.notAuthenticated, function (event, next) {
-    $location.url(PAGE_URL.ROOT);
+    //$location.url(PAGE_URL.ROOT);
   });
   $rootScope.$on(AUTH_EVENTS.sessionTimeout, function (event, next) {
-    $location.url(PAGE_URL.ROOT);
+    //$location.url(PAGE_URL.ROOT);
   });  
 
   if(Session.getValue(APPLICATION.authToken) != null){
-    $location.url(PAGE_URL.HOME);
+    //$location.url(PAGE_URL.HOME);
   }
 });
 
