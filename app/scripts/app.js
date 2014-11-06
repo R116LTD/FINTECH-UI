@@ -38,10 +38,10 @@ var app = angular.module('angularjsApp', ['ngRoute', 'loginController','todoCont
   }]);
 
 app.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.headers.common['X-Mifos-Platform-TenantId'] = 'default';
         $httpProvider.defaults.useXDomain = true;
-        $httpProvider.defaults.headers.common['Accept'] = 'application/json';
-        $httpProvider.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        $httpProvider.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
     }
 ]);
 
@@ -64,14 +64,17 @@ app.run(function ($rootScope, $location, AUTH_EVENTS, AuthService, Session, APPL
 
   //hendled notAuthenticated event
   $rootScope.$on(AUTH_EVENTS.notAuthenticated, function (event, next) {
-    //$location.url(PAGE_URL.ROOT);
+    $location.url(PAGE_URL.ROOT);
   });
   $rootScope.$on(AUTH_EVENTS.sessionTimeout, function (event, next) {
-    //$location.url(PAGE_URL.ROOT);
+    $location.url(PAGE_URL.ROOT);
   });  
 
   if(Session.getValue(APPLICATION.authToken) != null){
-    //$location.url(PAGE_URL.HOME);
+    $location.url(PAGE_URL.HOME);
+  }else{
+    //TODO - Need to remove else block once all the functionality will be implemented
+    $location.url(PAGE_URL.ROOT);
   }
 });
 

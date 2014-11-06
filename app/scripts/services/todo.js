@@ -6,7 +6,7 @@ todoService.factory('TodoService', function($http, Remote) {
     return {
 	  	    list: function(url) { 
                 console.log('todo List service...'); 
-                var promise = Remote.get(url); 
+                var promise = Remote.get(url);
 		  	    return promise;
 		  	},
             save: function(url, todo){
@@ -18,6 +18,11 @@ todoService.factory('TodoService', function($http, Remote) {
                 console.log('todo delete service...'); 
                 var promise = Remote.delete(url +"/" + todoId); 
                 return promise;
-            } 
+            },
+            clientList: function(url){
+                console.log('Get total active clients...');
+                var promise = Remote.get(url);
+                return promise;
+            }
 	}
 });

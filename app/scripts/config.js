@@ -4,7 +4,7 @@
 var app = angular.module('Constants', []);
 
 app.constant('APPLICATION', {
-    'host' : 'http://finemsys.elasticbeanstalk.com/',
+    'host' : 'https://192.168.1.20:8443/',
     'sessionName': 'ang_session',
     'authToken': 'token',
     'username' : 'username',
@@ -12,10 +12,11 @@ app.constant('APPLICATION', {
 });
 
 app.constant('REST_URL', {
-    'AUTHENTICATION': 'authentication',
+    'AUTHENTICATION': 'mifosng-provider/api/v1/authentication',
     'TODO_LIST': 'todos',
     'SAVE_TODO': 'todo/save',
     'DELETE_TODO': 'todo/delete',
+    'CLIENTS': 'mifosng-provider/api/v1/authentication',//TODO - URL to get client list will be placed here
 });
 
 app.constant('PAGE_URL', {

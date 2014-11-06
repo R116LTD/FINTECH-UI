@@ -4,10 +4,7 @@ var delegatorServices = angular.module('delegatorServices', ['Utils','Constants'
 
 delegatorServices.factory('Remote', function($http, APPLICATION, Session) {
 	return {
-		setHeader: function(){
-			if(Session.getValue(APPLICATION.authToken) != null){
-				$http.defaults.headers.common['X-AUTH-TOKEN'] = Session.getValue(APPLICATION.authToken);
-			}
+		setHeader: function(){				
 		},
 	  	get: function(url) {
 			console.log('Delegator GET :' + APPLICATION.host + url);
@@ -28,16 +25,14 @@ delegatorServices.factory('Remote', function($http, APPLICATION, Session) {
 	  	},
 	  	post: function(url, jsondata) {
 	  		console.log('Delegator POST :' + APPLICATION.host + url +" -> JSON DATA : "+ jsondata);
-			this.setHeader();
-			
-
-	  		var promise = $http.post(APPLICATION.host + url, jsondata, {withCredentials: true})
+			this.setHeader();			
+	  		var promise = $http.post(APPLICATION.host + url, jsondata)
 	  		.success(function (data, status) {
 	  			console.log('Success from server'); 
 	  			return data;
 			})
 			.error(function (data, status) {
-				console.log('Error from server'); 
+				console.log('Error from server > ' + data); 
 				return null;
 			});
 			

@@ -9,19 +9,26 @@ LoginCtrl.controller('LoginCtrl', function ($scope, $rootScope,$location, Auth, 
   //Authentication controller 
   $scope.authenticate = function(loginDetails){
     console.log('LoginCtrl : authenticate');
-    if(!Utility.isUndefinedOrNull(loginDetails)){
-      Auth.setCredentials(loginDetails.username, loginDetails.password);
-      AuthService.login(REST_URL.AUTHENTICATION).then(function(result){
-        console.log('Success : Return from login service.');
-        $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-        Session.create(result.data.user.token, result.data.user.details.username, result.data.user.details.roles[0]);
-        $location.url(PAGE_URL.HOME);
-      },function(result){
+    $scope.error=false;
+    if ($scope.loginForm.$valid) {
+      if(!Utility.isUndefinedOrNull(loginDetails)){
+        Auth.setCredentials(loginDetails.username, loginDetails.password);
+        AuthService.login(REST_URL.AUTHENTICATION+"?username="+loginDetails.username+"&password="+loginDetails.password).then(function(result){
+          console.log('Success : Return from login service.');
+          $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+          Session.create(result.data.base64EncodedAuthenticationKey, result.data.username, result.data.roles[0]);
+          $location.url(PAGE_URL.HOME);
+        },function(result){
+          $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+          $scope.error=true;
+          console.log('Error : Return from login service.');
+        });
+      }else{
         $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
-        console.log('Error : Return from login service.');
-      });
-    }else{
-      $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+        $scope.error=true;
+      }
+    } else {
+      $scope.loginForm.invalidate = true;
     }
   };
 
@@ -34,4 +41,8 @@ LoginCtrl.controller('LoginCtrl', function ($scope, $rootScope,$location, Auth, 
       });
   };
 
+  //Clear error from the login page
+  $scope.clearError = function(){
+   $scope.loginForm.invalidate = false;
+  };
 });

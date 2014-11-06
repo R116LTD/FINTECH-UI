@@ -4,14 +4,19 @@
 var TodoCtrl = angular.module('todoController',['todoService','Constants', 'GraphUtils'])
   
 TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoService, REST_URL, PAGE_URL, APPLICATION, Session, Graph) {
-  $scope.username = Session.getValue(APPLICATION.username);
+  
   $scope.getTodos = function(){
     console.log('TodoCtrl : getTodos');
+    //Set header values 
+    $scope.getTotalActiveClients();
+    $scope.getTotalBorrowers();
+    $scope.getLoansInBadStanding();
+    $scope.getRepaymentsDueThisWeek();    
     //Start Dummy Charts
-    $scope.borrowerPerLoanOfficer = Graph.getColumnChart();
-    $scope.PARPerLoanOfficer = Graph.getBarChart();
-    $scope.loanPortfolioCurrentMonth = Graph.getPieChart();
-    $scope.dueVsCollectedLastWeek = Graph.getLineChart();
+    $scope.borrowerPerLoanOfficer = Graph.getColumnChart('activeBorrowers');
+    $scope.PARPerLoanOfficer = Graph.getColumnChart('parPerLoan');
+    $scope.loanPortfolioCurrentMonth = Graph.getColumnChart('changesInLoanPortfolio');
+    $scope.dueVsCollectedLastWeek = Graph.getPieChart();
     //End Dummy Charts
     TodoService.list(REST_URL.TODO_LIST).then(function(result){
       console.log('Success : Return from todo list service.');
@@ -24,7 +29,6 @@ TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoSer
 
   $scope.saveTodo = function(todo){
     console.log('TodoCtrl : saveTodo');
-
     TodoService.save(REST_URL.SAVE_TODO, angular.toJson('{"todo": {"name": "'+todo.name+'"}}')).then(function(result){
       console.log('Success : Return from todo save service.');
       $location.url(PAGE_URL.HOME);
@@ -34,8 +38,7 @@ TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoSer
   };
 
   $scope.deleteTodo = function(todoId){
-    console.log('TodoCtrl : deleteTodo');
-    
+    console.log('TodoCtrl : deleteTodo');    
     TodoService.delete(REST_URL.DELETE_TODO, todoId).then(function(result){
       console.log('Success : Return from todo delete service.');
       $location.url(PAGE_URL.HOME);
@@ -44,6 +47,50 @@ TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoSer
     }); 
   };
 
-  $scope.getTodos();
+ $scope.getTotalActiveClients = function(){
+    console.log('TodoCtrl : getTotalActiveClients');
+    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
+      console.log('Success : Return from todo totalActiveClients service.');
+      $scope.totalActiveClient = 631;      
+    },function(result){
+      console.log('Error : Return from todo totalActiveClients service.');
+      $scope.totalActiveClient = 631;
+    });    
+  };
 
+  $scope.getTotalBorrowers = function(){
+    console.log('TodoCtrl : getTotalActiveClients');
+    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
+      console.log('Success : Return from todo totalActiveClients service.');
+      $scope.totalBorrowers = 629;
+    },function(result){
+      console.log('Error : Return from todo totalActiveClients service.');
+      $scope.totalBorrowers = 629;
+    });
+  };
+
+  $scope.getLoansInBadStanding = function(){
+    console.log('TodoCtrl : getTotalActiveClients');
+    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
+      console.log('Success : Return from todo totalActiveClients service.');
+      $scope.loansInBadStanding = 302;
+    },function(result){
+      console.log('Error : Return from todo totalActiveClients service.');
+      $scope.loansInBadStanding = 302;
+    });
+  };
+
+  $scope.getRepaymentsDueThisWeek = function(){
+    console.log('TodoCtrl : getTotalActiveClients');
+    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
+      console.log('Success : Return from todo totalActiveClients service.');
+      $scope.repaymentsDueThisWeek = 147;
+    },function(result){
+      console.log('Error : Return from todo totalActiveClients service.');
+      $scope.repaymentsDueThisWeek = 147;
+    });
+  };
+
+  $scope.username = Session.getValue(APPLICATION.username);  
+  $scope.getTodos();
 });

@@ -6,7 +6,7 @@ userServices.factory('AuthService', function($http, $filter, Remote, Session) {
     return {
 	  	    login: function(url, loginDetails) { 
                 console.log('Login service...'); 
-                var promise = Remote.post(url, $filter('json')(loginDetails)); 
+                var promise = Remote.post(url); 
 		  	    return promise;
 		  	},
             logout: function(url){
