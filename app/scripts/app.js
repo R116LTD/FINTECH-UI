@@ -15,6 +15,7 @@ var app = angular.module('angularjsApp', ['ngRoute', 'loginController','todoCont
   app.config(['$routeProvider',function($routeProvider) {
     $routeProvider.
       when('/', {
+        hclass: 'pre-login',
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       }).
@@ -48,7 +49,17 @@ app.config(['$httpProvider', function($httpProvider) {
 
 app.run(function ($rootScope, $location, AUTH_EVENTS, AuthService, Session, APPLICATION,PAGE_URL) {
   
-  $rootScope.$on('$stateChangeStart', function (event, next) {
+  $rootScope.page = {
+      setHclass: function(hclass) {
+          this.hclass = hclass;
+      }
+  }
+
+  $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+        $rootScope.page.setHclass(current.$$route.hclass);
+  });
+
+  $rootScope.$on('$stateChangeStart', function (event, next) {    
     var authorizedRoles = next.data.authorizedRoles;
     if (!AuthService.isAuthorized(authorizedRoles)) {
       event.preventDefault();
@@ -71,7 +82,7 @@ app.run(function ($rootScope, $location, AUTH_EVENTS, AuthService, Session, APPL
   });  
 
   if(Session.getValue(APPLICATION.authToken) != null){
-    $location.url(PAGE_URL.HOME);
+   // $location.url(PAGE_URL.HOME);
   }else{
     //TODO - Need to remove else block once all the functionality will be implemented
     $location.url(PAGE_URL.ROOT);
@@ -102,6 +113,7 @@ app.factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
 })
 
 app.controller('ApplicationController', function ($scope, $location, USER_ROLES, AuthService) {
+  $scope.page.setHclass('pre-login');
   $scope.currentUser = null;
   $scope.userRoles = USER_ROLES;
   $scope.isAuthorized = AuthService.isAuthorized;
