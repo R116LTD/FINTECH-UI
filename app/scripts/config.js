@@ -13,7 +13,7 @@ app.constant('APPLICATION', {
 
 app.constant('REST_URL', {
     'AUTHENTICATION': 'api/v1/authentication',
-    'TODO_LIST': 'todos',
+    'TODO_LIST': 'api/v1/loans?tenantIdentifier=default&pretty=true',
     'SAVE_TODO': 'todo/save',
     'DELETE_TODO': 'todo/delete',
     'CLIENTS': 'api/v1/authentication',//TODO - URL to get client list will be placed here
