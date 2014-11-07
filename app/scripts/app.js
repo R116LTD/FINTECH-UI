@@ -82,7 +82,7 @@ app.run(function ($rootScope, $location, AUTH_EVENTS, AuthService, Session, APPL
   });  
 
   if(Session.getValue(APPLICATION.authToken) != null){
-   // $location.url(PAGE_URL.HOME);
+    $location.url(PAGE_URL.HOME);
   }else{
     //TODO - Need to remove else block once all the functionality will be implemented
     $location.url(PAGE_URL.ROOT);
@@ -112,8 +112,7 @@ app.factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
   };
 })
 
-app.controller('ApplicationController', function ($scope, $location, USER_ROLES, AuthService) {
-  $scope.page.setHclass('pre-login');
+app.controller('ApplicationController', function ($scope, $location, USER_ROLES, AuthService) {  
   $scope.currentUser = null;
   $scope.userRoles = USER_ROLES;
   $scope.isAuthorized = AuthService.isAuthorized;
