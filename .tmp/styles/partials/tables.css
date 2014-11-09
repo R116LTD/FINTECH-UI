@@ -1,28 +1,40 @@
 /*
-Error: Undefined mixin 'box-shadow'.
-        on line 16 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/forms.scss, in `box-shadow'
-        from line 16 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/forms.scss
+Error: Undefined variable: "$background-web".
+        on line 3 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/tables.scss
 
-11:   font-size:16px;
-12: }
-13: 
-14: input[type=text]:focus, textarea:focus,
-15: input[type=password]:focus {
-16:   @include box-shadow(0 0 5px $primary-color);
-17:   outline:0;
-18:   border-color: $primary-color;
-19: }
-20: 
-21: .form-control-feedback {
+1: .table {
+2:    >thead>tr>th {
+3:     background: lighten($background-web,0.8%);
+4:     border: 1px solid $border-color !important;
+5:     font-size:12px;
+6:     font-weight:200;
+7:     color: lighten($text-color,30%);
+8:   }
 
 Backtrace:
-/Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/forms.scss:16:in `box-shadow'
-/Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/forms.scss:16
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/tables.scss:3
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/funcall.rb:170:in `perform_arg'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/funcall.rb:124:in `block in _perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/funcall.rb:124:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/funcall.rb:124:in `each_with_index'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/funcall.rb:124:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/funcall.rb:124:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/funcall.rb:124:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:98:in `with_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
@@ -73,4 +85,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'box-shadow'.\A         on line 16 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/forms.scss, in `box-shadow'\A         from line 16 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/forms.scss\A \A 11:   font-size:16px;\A 12: }\A 13: \A 14: input[type=text]:focus, textarea:focus,\A 15: input[type=password]:focus {\A 16:   @include box-shadow(0 0 5px $primary-color);\A 17:   outline:0;\A 18:   border-color: $primary-color;\A 19: }\A 20: \A 21: .form-control-feedback {"; }
+  content: "Error: Undefined variable: \"$background-web\".\A         on line 3 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/tables.scss\A \A 1: .table {\A 2:    >thead>tr>th {\A 3:     background: lighten($background-web,0.8%);\A 4:     border: 1px solid $border-color !important;\A 5:     font-size:12px;\A 6:     font-weight:200;\A 7:     color: lighten($text-color,30%);\A 8:   }"; }

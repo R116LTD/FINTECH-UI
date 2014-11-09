@@ -4869,61 +4869,61 @@ tbody.collapse.in {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\000039}}
-.nav, .shortcuts ul {
+.nav, .links-horizontal ul, .shortcuts ul, .filters ul {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
-.nav:before, .shortcuts ul:before, .nav:after, .shortcuts ul:after {
+.nav:before, .links-horizontal ul:before, .shortcuts ul:before, .filters ul:before, .nav:after, .links-horizontal ul:after, .shortcuts ul:after, .filters ul:after {
   content: " ";
   display: table;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
-.nav:after, .shortcuts ul:after {
+.nav:after, .links-horizontal ul:after, .shortcuts ul:after, .filters ul:after {
   clear: both;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000315}}
-.nav > li, .shortcuts ul > li {
+.nav > li, .links-horizontal ul > li, .shortcuts ul > li, .filters ul > li {
   position: relative;
   display: block;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000319}}
-.nav > li > a, .shortcuts ul > li > a {
+.nav > li > a, .links-horizontal ul > li > a, .shortcuts ul > li > a, .filters ul > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000323}}
-.nav > li > a:hover, .shortcuts ul > li > a:hover, .nav > li > a:focus, .shortcuts ul > li > a:focus {
+.nav > li > a:hover, .links-horizontal ul > li > a:hover, .shortcuts ul > li > a:hover, .filters ul > li > a:hover, .nav > li > a:focus, .links-horizontal ul > li > a:focus, .shortcuts ul > li > a:focus, .filters ul > li > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000331}}
-.nav > li.disabled > a, .shortcuts ul > li.disabled > a {
+.nav > li.disabled > a, .links-horizontal ul > li.disabled > a, .shortcuts ul > li.disabled > a, .filters ul > li.disabled > a {
   color: #777777;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000334}}
-.nav > li.disabled > a:hover, .shortcuts ul > li.disabled > a:hover, .nav > li.disabled > a:focus, .shortcuts ul > li.disabled > a:focus {
+.nav > li.disabled > a:hover, .links-horizontal ul > li.disabled > a:hover, .shortcuts ul > li.disabled > a:hover, .filters ul > li.disabled > a:hover, .nav > li.disabled > a:focus, .links-horizontal ul > li.disabled > a:focus, .shortcuts ul > li.disabled > a:focus, .filters ul > li.disabled > a:focus {
   color: #777777;
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000346}}
-.nav .open > a, .shortcuts ul .open > a, .nav .open > a:hover, .shortcuts ul .open > a:hover, .nav .open > a:focus, .shortcuts ul .open > a:focus {
+.nav .open > a, .links-horizontal ul .open > a, .shortcuts ul .open > a, .filters ul .open > a, .nav .open > a:hover, .links-horizontal ul .open > a:hover, .shortcuts ul .open > a:hover, .filters ul .open > a:hover, .nav .open > a:focus, .links-horizontal ul .open > a:focus, .shortcuts ul .open > a:focus, .filters ul .open > a:focus {
   background-color: #eeeeee;
   border-color: #428bca;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000359}}
-.nav .nav-divider, .shortcuts ul .nav-divider {
+.nav .nav-divider, .links-horizontal ul .nav-divider, .shortcuts ul .nav-divider, .filters ul .nav-divider {
   height: 1px;
   margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000366}}
-.nav > li > a > img, .shortcuts ul > li > a > img {
+.nav > li > a > img, .links-horizontal ul > li > a > img, .shortcuts ul > li > a > img, .filters ul > li > a > img {
   max-width: none;
 }
 
@@ -4957,19 +4957,19 @@ tbody.collapse.in {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003118}}
-.nav-pills > li, .shortcuts ul > li {
+.nav-pills > li, .links-horizontal ul > li, .shortcuts ul > li, .filters ul > li {
   float: left;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003122}}
-.nav-pills > li > a, .shortcuts ul > li > a {
+.nav-pills > li > a, .links-horizontal ul > li > a, .shortcuts ul > li > a, .filters ul > li > a {
   border-radius: 4px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003125}}
-.nav-pills > li + li, .shortcuts ul > li + li {
+.nav-pills > li + li, .links-horizontal ul > li + li, .shortcuts ul > li + li, .filters ul > li + li {
   margin-left: 2px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003131}}
-.nav-pills > li.active > a, .shortcuts ul > li.active > a, .nav-pills > li.active > a:hover, .shortcuts ul > li.active > a:hover, .nav-pills > li.active > a:focus, .shortcuts ul > li.active > a:focus {
+.nav-pills > li.active > a, .links-horizontal ul > li.active > a, .shortcuts ul > li.active > a, .filters ul > li.active > a, .nav-pills > li.active > a:hover, .links-horizontal ul > li.active > a:hover, .shortcuts ul > li.active > a:hover, .filters ul > li.active > a:hover, .nav-pills > li.active > a:focus, .links-horizontal ul > li.active > a:focus, .shortcuts ul > li.active > a:focus, .filters ul > li.active > a:focus {
   color: #fff;
   background-color: #428bca;
 }
@@ -5936,12 +5936,12 @@ a.label:hover, a.label:focus {
   padding: 1px 5px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_badges\.scss}line{font-family:\0000339}}
-a.list-group-item.active > .badge, .nav-pills > .active > a > .badge, .shortcuts ul > .active > a > .badge {
+a.list-group-item.active > .badge, .nav-pills > .active > a > .badge, .links-horizontal ul > .active > a > .badge, .shortcuts ul > .active > a > .badge, .filters ul > .active > a > .badge {
   color: #428bca;
   background-color: #fff;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_badges\.scss}line{font-family:\0000344}}
-.nav-pills > li > a > .badge, .shortcuts ul > li > a > .badge {
+.nav-pills > li > a > .badge, .links-horizontal ul > li > a > .badge, .shortcuts ul > li > a > .badge, .filters ul > li > a > .badge {
   margin-left: 3px;
 }
 
@@ -8058,11 +8058,11 @@ nav .navbar-header .navbar-brand > span {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000326}}
 nav .navbar-nav > li > a {
-  padding: 25px 20px 25px 45px;
+  padding: 25px 15px 25px 40px;
   font-size: 12px;
   color: #666666;
   line-height: 14px;
-  background-position: 20px center;
+  background-position: 15px center;
   background-repeat: no-repeat;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000335}}
@@ -8117,7 +8117,7 @@ nav .user {
 nav .navbar-nav > .active > a {
   background-color: #E28B00;
   color: white;
-  background-position: 20px center;
+  background-position: 15px center;
   background-repeat: no-repeat;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\0000381}}
@@ -8148,35 +8148,33 @@ nav .active > .configuration {
 nav .navbar-form {
   margin-top: 16px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003104}}
-nav input {
-  padding: 5px 10px;
-  border-radius: 50px;
-  border: 1px solid #bfbfbf;
-  font-size: 12px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003107}}
 nav .navbar-right > li > a {
   margin: 7px;
   border-left: 1px solid #F2F2F2;
   border-right: 1px solid #F2F2F2;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/header\.scss}line{font-family:\00003113}}
 nav .navbar-right > li:last-child a {
   margin: 0;
   border: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\000033}}
+.pre-login input.form-control,
+.pre-login .btn {
+  height: 45px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\000038}}
 input.form-control {
   border-radius: 4px;
   border: 1px solid #CCCCCC;
-  height: 45px;
   font-size: 16px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000314}}
 input[type=text]:focus, textarea:focus,
 input[type=password]:focus {
   box-shadow: 0 0 5px #E28B00;
@@ -8184,34 +8182,41 @@ input[type=password]:focus {
   border-color: #E28B00;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000321}}
 .form-control-feedback {
   top: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000326}}
 .btn {
-  height: 45px;
   font-size: 16px;
   border: 1px transparent;
   font-weight: 500;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000331}}
 .btn:active {
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000336}}
 .primary {
   background: #449ACC;
   color: #fff !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000340}}
 .primary:hover {
   background: #6cb0d7;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000347}}
+.search-box {
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 1px solid #bfbfbf;
+  font-size: 12px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000355}}
 .error {
   color: #D0021B;
   background-color: #FCD4D9;
@@ -8219,7 +8224,7 @@ input[type=password]:focus {
   font-weight: 100;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/forms\.scss}line{font-family:\0000364}}
 ::-webkit-input-placeholder,
 :-moz-placeholder,
 ::-moz-placeholder,
@@ -8231,13 +8236,78 @@ input[type=password]:focus {
   line-height: 18px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\000032}}
+.table > thead > tr > th {
+  background: #fafafa;
+  border: 1px solid #F2F2F2 !important;
+  font-size: 12px;
+  font-weight: 200;
+  color: gray;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\000039}}
+.table > tbody > tr {
+  background: #ffffff;
+  border: 1px solid #F2F2F2;
+  border-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000314}}
+.table > tbody > tr > td {
+  padding: 10px !important;
+  border: 0 !important;
+  font-size: 12px !important;
+  font-weight: 100;
+  color: gray;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000321}}
+.table .name {
+  font-size: 16px;
+  font-weight: 100;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000327}}
+.table .status {
+  font-weight: 500;
+  font-size: 11px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000330}}
+.table .status:before {
+  content: '\2022';
+  font-size: 39px;
+  line-height: 24px;
+  vertical-align: middle;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000337}}
+.table .active {
+  color: #68C49E;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000340}}
+.table .bad {
+  color: #F44042;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000343}}
+.table .on-hold {
+  color: #F5A623;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000346}}
+.table .closed {
+  color: #777777;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/partials\/tables\.scss}line{font-family:\0000349}}
+.table .grid-button {
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background-color: #68C49E;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\000035}}
 body {
   background: #f8f8f8;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\000039}}
 body.pre-login {
   background-color: #e4e4e4;
   background-image: url(../images/background-pattern.png) !important;
@@ -8245,7 +8315,7 @@ body.pre-login {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000315}}
 .login-box {
   padding: 60px 10px 10px 10px;
   width: 380px;
@@ -8257,7 +8327,7 @@ body.pre-login {
   right: 0;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000323}}
 .login-box legend {
   margin-top: 15px;
   font-size: 18px;
@@ -8267,28 +8337,40 @@ body.pre-login {
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000333}}
 .post-login {
   margin-top: 80px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000343}}
-.shortcuts ul > li:last-child a {
+.links-horizontal ul > li:last-child a, .shortcuts ul > li:last-child a, .filters ul > li:last-child a {
   border-right: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000348}}
-.shortcuts ul > li + li {
+.links-horizontal li > .active, .shortcuts li > .active, .filters li > .active {
+  color: #E28B00;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000353}}
+.links-horizontal ul > li + li, .shortcuts ul > li + li, .filters ul > li + li {
   margin-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000352}}
-.shortcuts ul > .label,
-.shortcuts ul > li > a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000357}}
+.links-horizontal ul > li > a, .shortcuts ul > li > a, .filters ul > li > a {
   padding: 5px 10px;
   font-size: 12px;
   border-right: 1px solid #e8e8e8;
   border-radius: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000360}}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000370}}
+.shortcuts ul > .label {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-right: 1px solid #e8e8e8;
+  border-radius: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000377}}
 .shortcuts ul > .label {
   padding-left: 20px;
   color: #E28B00;
@@ -8302,18 +8384,18 @@ body.pre-login {
   border: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000393}}
 .summary {
   margin: 15px 0;
   padding: 10px;
   background: #fff;
   border: 1px solid #F2F2F2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000399}}
 .summary .horizontal {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003103}}
 .summary .horizontal dt {
   width: auto;
   padding: 0 10px;
@@ -8321,7 +8403,7 @@ body.pre-login {
   font-weight: 600;
   clear: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003110}}
 .summary .horizontal dd {
   margin-top: 2px;
   margin-left: 0px;
@@ -8334,12 +8416,12 @@ body.pre-login {
   border-right: 1px solid #F2F2F2;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003123}}
 .summary dd:last-of-type {
   border: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003130}}
 .kpis {
   margin-left: -15px;
   margin-right: -15px;
@@ -8353,7 +8435,7 @@ body.pre-login {
 .kpis:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003133}}
 .kpis .charts {
   position: relative;
   min-height: 1px;
@@ -8361,19 +8443,19 @@ body.pre-login {
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003133}}
   .kpis .charts {
     float: left;
     width: 50%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003136}}
 .kpis .charts .portlet {
   border-radius: 0;
   border-color: #F2F2F2;
   box-shadow: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003143}}
 .kpis .charts .portlet .heading {
   border-radius: 0;
   background: #fff;
@@ -8381,8 +8463,160 @@ body.pre-login {
   font-size: 16px;
   font-weight: 100;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003152}}
 .kpis .charts .portlet .body {
   border-radius: 0;
   height: 200px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003162}}
+.page-header {
+  margin-bottom: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003164}}
+.page-header .header {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
+.page-header .header:before, .page-header .header:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
+.page-header .header:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003167}}
+.page-header .header h3 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 29px;
+}
+@media (min-width: 1200px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003167}}
+  .page-header .header h3 {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003167}}
+  .page-header .header h3 {
+    float: left;
+    width: 75%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003175}}
+.page-header .header .action {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+}
+@media (min-width: 1200px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003175}}
+  .page-header .header .action {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003175}}
+  .page-header .header .action {
+    float: left;
+    width: 25%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003180}}
+.page-header .header .action .primary {
+  padding: 5px 20px !important;
+  font-size: 14px !important;
+  border-radius: 50px;
+  height: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003189}}
+.filters {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000314}}
+.filters:before, .filters:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix\.scss}line{font-family:\0000319}}
+.filters:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003195}}
+.filters ul {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003195}}
+  .filters ul {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003195}}
+  .filters ul {
+    float: left;
+    width: 75%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003199}}
+.filters ul > li > a {
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003203}}
+.filters .search {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: right;
+}
+@media (min-width: 1200px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003203}}
+  .filters .search {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Aadesh\/Personal\/Projects\/Finem\/FINTECH-UI\/app\/styles\/main-web\.scss}line{font-family:\00003203}}
+  .filters .search {
+    float: left;
+    width: 25%;
+  }
 }

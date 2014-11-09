@@ -6,15 +6,15 @@ Error: Undefined mixin 'box-shadow'.
 
 1: @import "partials/header.scss";
 2: @import "partials/forms.scss";
-3: 
-4: body {
-5:   background: $background-web;
-6:   font-family: $font-family;
-7: }
-8: body.pre-login {
-9:   background-color: darken($background-web,8%);
-10:   background-image: url(../images/background-pattern.png) !important;
-11:   border-top:10px solid $primary-color;
+3: @import "partials/tables.scss";
+4: 
+5: body {
+6:   background: $background-web;
+7:   font-family: $font-family;
+8: }
+9: body.pre-login {
+10:   background-color: darken($background-web,8%);
+11:   background-image: url(../images/background-pattern.png) !important;
 
 Backtrace:
 /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/header.scss:6:in `box-shadow'
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'box-shadow'.\A         on line 6 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/header.scss, in `box-shadow'\A         from line 6 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/header.scss\A         from line 1 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/main-web.scss\A \A 1: @import \"partials/header.scss\";\A 2: @import \"partials/forms.scss\";\A 3: \A 4: body {\A 5:   background: $background-web;\A 6:   font-family: $font-family;\A 7: }\A 8: body.pre-login {\A 9:   background-color: darken($background-web,8%);\A 10:   background-image: url(../images/background-pattern.png) !important;\A 11:   border-top:10px solid $primary-color;"; }
+  content: "Error: Undefined mixin 'box-shadow'.\A         on line 6 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/header.scss, in `box-shadow'\A         from line 6 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/partials/header.scss\A         from line 1 of /Users/Aadesh/Personal/Projects/Finem/FINTECH-UI/app/styles/main-web.scss\A \A 1: @import \"partials/header.scss\";\A 2: @import \"partials/forms.scss\";\A 3: @import \"partials/tables.scss\";\A 4: \A 5: body {\A 6:   background: $background-web;\A 7:   font-family: $font-family;\A 8: }\A 9: body.pre-login {\A 10:   background-color: darken($background-web,8%);\A 11:   background-image: url(../images/background-pattern.png) !important;"; }

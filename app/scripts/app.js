@@ -26,6 +26,13 @@ var app = angular.module('angularjsApp', ['ngRoute', 'loginController','todoCont
             authorizedRoles: ['admin']
           }
       }).
+      when('/clients', {
+        templateUrl: 'views/clients.html',
+        controller: 'TodoCtrl',
+        data: {
+            authorizedRoles: ['admin']
+          }
+      }).
       when('/todo/save', {
         templateUrl: 'views/addedit.html',
         controller: 'TodoCtrl',

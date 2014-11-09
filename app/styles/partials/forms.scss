@@ -1,8 +1,13 @@
 // INPUT BOXES
+.pre-login {
+  input.form-control,
+  .btn {
+    height:45px;
+  }
+}
 input.form-control {
   border-radius: 4px;
   border: 1px solid #CCCCCC;
-  height:45px;
   font-size:16px;
 }
 
@@ -19,7 +24,6 @@ input[type=password]:focus {
 
 // BUTTONS
 .btn {
-  height:45px;
   font-size:16px;
   border: 1px transparent;
   font-weight:500;
@@ -38,7 +42,14 @@ input[type=password]:focus {
   }
 }
 
+//SEARCH BOX 
 
+.search-box {
+  padding:5px 10px;
+  border-radius: 50px;
+  border: 1px solid darken($input-border,5%);
+  font-size:12px;
+}
 // NOTIFICATIONS 
 
 .error {

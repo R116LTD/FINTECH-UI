@@ -1,5 +1,6 @@
 @import "partials/header.scss";
 @import "partials/forms.scss";
+@import "partials/tables.scss";
 
 body {
   background: $background-web;
@@ -33,9 +34,8 @@ body.pre-login {
   margin-top:80px;
 }
 
-// SHORTCUTS
-
-.shortcuts {
+// LINKS - HORIZONTAL 
+.links-horizontal {
   ul {
     @extend .nav;
     @extend .nav-pills;
@@ -45,11 +45,15 @@ body.pre-login {
     }
   }
 
+  li > .active {
+    color: $primary-color;
+    font-weight:bold;
+  }
+
   ul > li + li {
     margin-left:0;
   }
 
-  ul > .label,
   ul > li > a {
     padding: 5px 10px;
     font-size:12px;
@@ -57,6 +61,19 @@ body.pre-login {
     border-radius: 0;
   }
 
+}
+// SHORTCUTS
+
+.shortcuts {
+  @extend .links-horizontal;
+  
+  ul > .label {
+    padding: 5px 10px;
+    font-size:12px;
+    border-right: 1px solid darken($border-color,4%);
+    border-radius: 0;
+  }
+  
   ul > .label {
     padding-left:20px;
     color: $primary-color;
@@ -141,3 +158,51 @@ body.pre-login {
   }
 }
 
+//PAGE HEADER 
+.page-header {
+  margin-bottom:10px;
+  .header {
+    @include make-row();
+  }
+  .header h3 {
+    @include make-lg-column(9);
+    @include make-md-column(9);
+    margin:0;
+    font-size: 24px;
+    font-weight:200;
+    line-height: 29px;
+  }
+  .header .action {
+    @include make-lg-column(3);
+    @include make-md-column(3);
+    text-align: right;
+
+    .primary {
+      padding:5px 20px !important;
+      font-size:14px !important;
+      border-radius:50px;
+      height:auto;
+    }
+  }
+}
+
+.filters {
+  @include make-row();
+  @extend .links-horizontal;
+  margin-bottom:15px;
+
+  
+  ul {
+    @include make-lg-column(9);
+    @include make-md-column(9);
+  }
+  ul > li > a {
+    font-size:12px;
+  }
+
+  .search {
+    @include make-lg-column(3);
+    @include make-md-column(3);
+    text-align: right;
+  }
+}

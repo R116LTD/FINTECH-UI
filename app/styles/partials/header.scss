@@ -24,11 +24,11 @@ nav {
 
   //NAV LINKS
   .navbar-nav > li > a {
-    padding: 25px 20px 25px 45px;
+    padding: 25px 15px 25px 40px;
     font-size: 12px;
     color: lighten($text-color,20%);
     line-height: 14px;
-    background-position: 20px center;
+    background-position: 15px center;
     background-repeat: no-repeat;
   }
 
@@ -74,7 +74,7 @@ nav {
   .navbar-nav > .active > a {
     background-color: $primary-color;
     color: white;
-    background-position: 20px center;
+    background-position: 15px center;
     background-repeat: no-repeat;
   }
   
@@ -100,12 +100,6 @@ nav {
   // SEARCH BOX 
   .navbar-form {
     margin-top: 16px;
-  }
-  input {
-    padding:5px 10px;
-    border-radius: 50px;
-    border: 1px solid darken($input-border,5%);
-    font-size:12px;
   }
 
   // RIGHT NAVBAR 
