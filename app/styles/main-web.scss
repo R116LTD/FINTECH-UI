@@ -2,9 +2,13 @@
 @import "partials/forms.scss";
 
 body {
-  // background: $body-web url(../images/background-pattern.png);
   background: $background-web;
-  // border-top:10px solid $primary-color;
+  font-family: $font-family;
+}
+body.pre-login {
+  background-color: darken($background-web,8%);
+  background-image: url(../images/background-pattern.png) !important;
+  border-top:10px solid $primary-color;
   font-family: $font-family;
 }
 .login-box {
