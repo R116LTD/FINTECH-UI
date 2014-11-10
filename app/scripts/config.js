@@ -2,9 +2,18 @@
 
 
 var app = angular.module('Constants', []);
+var host="";
+var getLocation = function (href) {
+    var l = document.createElement("a");
+    l.href = href;
+    return l;
+};
+var baseApiUrl="https://ip-172-31-30-97.us-west-2.compute.internal:8443";
+var queryLink = getLocation(baseApiUrl);
+host = "https://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
 
 app.constant('APPLICATION', {
-    'host' : 'https://ec2-54-69-185-193.us-west-2.compute.amazonaws.com:8443/',
+    'host' : 'https://ip-172-31-30-97.us-west-2.compute.internal:8443/',
     'sessionName': 'ang_session',
     'authToken': 'token',
     'username' : 'username',
