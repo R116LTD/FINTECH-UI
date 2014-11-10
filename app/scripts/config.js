@@ -8,12 +8,12 @@ var getLocation = function (href) {
     l.href = href;
     return l;
 };
-var baseApiUrl="https://ip-172-31-30-97.us-west-2.compute.internal:8443";
+var baseApiUrl="https://ec2-54-69-185-193.us-west-2.compute.amazonaws.com:8443";
 var queryLink = getLocation(baseApiUrl);
 host = "https://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
 
 app.constant('APPLICATION', {
-    'host' : 'https://ip-172-31-30-97.us-west-2.compute.internal:8443/',
+    'host' : host+'/',
     'sessionName': 'ang_session',
     'authToken': 'token',
     'username' : 'username',
