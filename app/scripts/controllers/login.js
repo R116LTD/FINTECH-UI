@@ -5,7 +5,7 @@ var LoginCtrl =  angular.module('loginController',['userServices','Utils','Const
   
 // The controller function let's us give our controller a name: MainCtrl
 // We'll then pass an anonymous function to serve as the controller itself.
-LoginCtrl.controller('LoginCtrl', function ($scope, $rootScope,$location, Auth, AuthService, Utility, AUTH_EVENTS, REST_URL, PAGE_URL, Session) {
+LoginCtrl.controller('LoginCtrl', function ($scope, $rootScope,$location, Auth, AuthService, Utility, AUTH_EVENTS, REST_URL, PAGE_URL, Session, Base64) {
   //Authentication controller 
   $scope.authenticate = function(loginDetails){
     console.log('LoginCtrl : authenticate');
@@ -15,8 +15,9 @@ LoginCtrl.controller('LoginCtrl', function ($scope, $rootScope,$location, Auth, 
         Auth.setCredentials(loginDetails.username, loginDetails.password);
         AuthService.login(REST_URL.AUTHENTICATION+"?username="+loginDetails.username+"&password="+loginDetails.password).then(function(result){
           console.log('Success : Return from login service.');
-          $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-          Session.create(result.data.base64EncodedAuthenticationKey, result.data.username, result.data.roles[0]);
+          $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);          
+          //Session.create(result.data.base64EncodedAuthenticationKey, result.data.username, result.data.roles[0]);
+          Session.create(Base64.encode(loginDetails.username + ':' + loginDetails.password), result.data.username, result.data.roles[0]);
           $location.url(PAGE_URL.HOME);
         },function(result){
           $rootScope.$broadcast(AUTH_EVENTS.loginFailed);

@@ -3,7 +3,7 @@
   // Here we attach this controller to our testApp module
 var TodoCtrl = angular.module('todoController',['todoService','Constants', 'GraphUtils'])
   
-TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoService, REST_URL, PAGE_URL, APPLICATION, Session, Graph) {
+TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoService, REST_URL, PAGE_URL, APPLICATION, Session, Graph, Auth) {
   
   $scope.getTodos = function(){
     console.log('TodoCtrl : getTodos');
@@ -48,45 +48,45 @@ TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoSer
   };
 
  $scope.getTotalActiveClients = function(){
-    console.log('TodoCtrl : getTotalActiveClients');
-    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
+    console.log('TodoCtrl : getTotalActiveClients');    
+    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
       console.log('Success : Return from todo totalActiveClients service.');
-      $scope.totalActiveClient = 631;      
+      $scope.totalActiveClient = result.data.totalFilteredRecords;
     },function(result){
       console.log('Error : Return from todo totalActiveClients service.');
-      $scope.totalActiveClient = 631;
+      $scope.totalActiveClient = 0;
     });    
   };
 
   $scope.getTotalBorrowers = function(){
-    console.log('TodoCtrl : getTotalActiveClients');
-    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
-      console.log('Success : Return from todo totalActiveClients service.');
+    console.log('TodoCtrl : getTotalBorrowers');
+    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
+      console.log('Success : Return from todo totalBorrowers service.');
       $scope.totalBorrowers = 629;
     },function(result){
-      console.log('Error : Return from todo totalActiveClients service.');
+      console.log('Error : Return from todo totalBorrowers service.');
       $scope.totalBorrowers = 629;
     });
   };
 
   $scope.getLoansInBadStanding = function(){
-    console.log('TodoCtrl : getTotalActiveClients');
-    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
-      console.log('Success : Return from todo totalActiveClients service.');
+    console.log('TodoCtrl : getLoansInBadStanding');
+    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
+      console.log('Success : Return from todo loansInBadStanding service.');
       $scope.loansInBadStanding = 302;
     },function(result){
-      console.log('Error : Return from todo totalActiveClients service.');
+      console.log('Error : Return from todo loansInBadStanding service.');
       $scope.loansInBadStanding = 302;
     });
   };
 
   $scope.getRepaymentsDueThisWeek = function(){
-    console.log('TodoCtrl : getTotalActiveClients');
-    TodoService.clientList(REST_URL.CLIENTS).then(function(result){
-      console.log('Success : Return from todo totalActiveClients service.');
+    console.log('TodoCtrl : getRepaymentsDueThisWeek');
+    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
+      console.log('Success : Return from todo repaymentsDueThisWeek service.');
       $scope.repaymentsDueThisWeek = 147;
     },function(result){
-      console.log('Error : Return from todo totalActiveClients service.');
+      console.log('Error : Return from todo repaymentsDueThisWeek service.');
       $scope.repaymentsDueThisWeek = 147;
     });
   };

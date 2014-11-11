@@ -2,18 +2,9 @@
 
 
 var app = angular.module('Constants', []);
-var host="";
-var getLocation = function (href) {
-    var l = document.createElement("a");
-    l.href = href;
-    return l;
-};
-var baseApiUrl="https://ec2-54-69-185-193.us-west-2.compute.amazonaws.com:8443";
-var queryLink = getLocation(baseApiUrl);
-host = "https://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
 
 app.constant('APPLICATION', {
-    'host' : host+'/',
+    'host' : 'https://ec2-54-69-185-193.us-west-2.compute.amazonaws.com:8443/',
     'sessionName': 'ang_session',
     'authToken': 'token',
     'username' : 'username',
@@ -25,7 +16,7 @@ app.constant('REST_URL', {
     'TODO_LIST': 'api/v1/loans?tenantIdentifier=default&pretty=true',
     'SAVE_TODO': 'todo/save',
     'DELETE_TODO': 'todo/delete',
-    'CLIENTS': 'api/v1/authentication',//TODO - URL to get client list will be placed here
+    'ACTIVE_CLIENTS': 'api/v1/clients?tenantIdentifier=default&pretty=true&sqlSearch=status_enum=300',
 });
 
 app.constant('PAGE_URL', {

@@ -4,14 +4,15 @@ var delegatorServices = angular.module('delegatorServices', ['Utils','Constants'
 
 delegatorServices.factory('Remote', function($http, APPLICATION, Session) {
 	return {
-		setHeader: function(){				
+		setHeader: function(){
+			$http.defaults.headers.common.Authorization = 'Basic ' + Session.getValue(APPLICATION.authToken);
 		},
 	  	get: function(url) {
 			console.log('Delegator GET :' + APPLICATION.host + url);
 			this.setHeader();
 			
 		    // com_thisnt below code to check with device id
-		  	var promise = $http.get(APPLICATION.host + url, {withCredentials: true} )
+		  	var promise = $http.get(APPLICATION.host + url)
 		  	.success(function (data, status) {
 		  		console.log('Success from server'); 
 		 		return data; //this success data will be used in then _thisthod of controller call 
@@ -25,7 +26,7 @@ delegatorServices.factory('Remote', function($http, APPLICATION, Session) {
 	  	},
 	  	post: function(url, jsondata) {
 	  		console.log('Delegator POST :' + APPLICATION.host + url +" -> JSON DATA : "+ jsondata);
-			this.setHeader();			
+			//this.setHeader();			
 	  		var promise = $http.post(APPLICATION.host + url, jsondata)
 	  		.success(function (data, status) {
 	  			console.log('Success from server'); 
