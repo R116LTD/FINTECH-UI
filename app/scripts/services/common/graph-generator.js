@@ -268,7 +268,7 @@ GraphUtils.factory('Graph', function () {
 
              return {
 		        "type": "ColumnChart",
-		        "cssStyle": "height:180px; width:500px;",
+		        "cssStyle": "height:180px; width:100%;",
 		        "data": data,
 		        "options": {
 		          "colors":['#88cac6','#e28b00','#449acc'],
@@ -292,7 +292,7 @@ GraphUtils.factory('Graph', function () {
         getBarChart: function () {
              return {
 		        "type": "BarChart",
-		        "cssStyle": "height:180px; width:500px;",
+		        "cssStyle": "height:180px; width:100%;",
 		        "data": {
 		          "cols": [
 		            {
@@ -411,7 +411,7 @@ GraphUtils.factory('Graph', function () {
         getLineChart: function () {
              return {
 		        "type": "LineChart",
-		        "cssStyle": "height:180px; width:500px;",
+		        "cssStyle": "height:180px; width:100%;",
 		        "data": {
 		          "cols": [
 		            {
@@ -530,7 +530,7 @@ GraphUtils.factory('Graph', function () {
         getPieChart: function () {
              return {
 		        "type": "PieChart",
-		        "cssStyle": "height:180px; width:500px;",
+		        "cssStyle": "height:180px; width:100%;",
 		        "data": {
 		          "cols": [
 		            {
