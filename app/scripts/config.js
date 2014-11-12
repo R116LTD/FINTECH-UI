@@ -4,7 +4,7 @@
 var app = angular.module('Constants', []);
 
 app.constant('APPLICATION', {
-    'host' : 'https://ec2-54-69-185-193.us-west-2.compute.amazonaws.com:8443/',
+    'host' : 'https://ec2-54-148-29-117.us-west-2.compute.amazonaws.com:8443/',
     'sessionName': 'ang_session',
     'authToken': 'token',
     'username' : 'username',
