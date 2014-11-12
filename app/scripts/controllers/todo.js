@@ -8,10 +8,7 @@ TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoSer
   $scope.getTodos = function(){
     console.log('TodoCtrl : getTodos');
     //Set header values 
-    $scope.getTotalActiveClients();
-    $scope.getTotalBorrowers();
-    $scope.getLoansInBadStanding();
-    $scope.getRepaymentsDueThisWeek();    
+    $scope.getHomePageHeaderStatic();    
     //Start Dummy Charts
     $scope.borrowerPerLoanOfficer = Graph.getColumnChart('activeBorrowers');
     $scope.PARPerLoanOfficer = Graph.getColumnChart('parPerLoan');
@@ -47,47 +44,20 @@ TodoCtrl.controller('TodoCtrl', function ($scope, $rootScope, $location, TodoSer
     }); 
   };
 
- $scope.getTotalActiveClients = function(){
-    console.log('TodoCtrl : getTotalActiveClients');    
-    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
-      console.log('Success : Return from todo totalActiveClients service.');
-      $scope.totalActiveClient = result.data.totalFilteredRecords;
+  $scope.getHomePageHeaderStatic = function(){
+    console.log('TodoCtrl : getHomePageHeaderStatic');
+    TodoService.headerStatic(REST_URL.HEADER_STATISTIC).then(function(result){
+      console.log('Success : Return from todo homePageHeaderStatic service.');
+      $scope.totalActiveClient = result.data[0].totalActiveClient;
+      $scope.totalBorrowers = result.data[0].totalBorrowers;
+      $scope.loansInBadStanding = result.data[0].loansInBadStanding;      
+      $scope.repaymentsDueThisWeek = result.data[0].repaymentsDueThisWeek;
     },function(result){
-      console.log('Error : Return from todo totalActiveClients service.');
+      console.log('Error : Return from todo homePageHeaderStatic service.');
       $scope.totalActiveClient = 0;
-    });    
-  };
-
-  $scope.getTotalBorrowers = function(){
-    console.log('TodoCtrl : getTotalBorrowers');
-    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
-      console.log('Success : Return from todo totalBorrowers service.');
-      $scope.totalBorrowers = 629;
-    },function(result){
-      console.log('Error : Return from todo totalBorrowers service.');
-      $scope.totalBorrowers = 629;
-    });
-  };
-
-  $scope.getLoansInBadStanding = function(){
-    console.log('TodoCtrl : getLoansInBadStanding');
-    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
-      console.log('Success : Return from todo loansInBadStanding service.');
-      $scope.loansInBadStanding = 302;
-    },function(result){
-      console.log('Error : Return from todo loansInBadStanding service.');
-      $scope.loansInBadStanding = 302;
-    });
-  };
-
-  $scope.getRepaymentsDueThisWeek = function(){
-    console.log('TodoCtrl : getRepaymentsDueThisWeek');
-    TodoService.clientList(REST_URL.ACTIVE_CLIENTS).then(function(result){
-      console.log('Success : Return from todo repaymentsDueThisWeek service.');
-      $scope.repaymentsDueThisWeek = 147;
-    },function(result){
-      console.log('Error : Return from todo repaymentsDueThisWeek service.');
-      $scope.repaymentsDueThisWeek = 147;
+      $scope.totalBorrowers = 0;
+      $scope.loansInBadStanding = 0;      
+      $scope.repaymentsDueThisWeek = 0;
     });
   };
 

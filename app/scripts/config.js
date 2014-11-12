@@ -3,8 +3,8 @@
 
 var app = angular.module('Constants', []);
 
-app.constant('APPLICATION', {
-    'host' : 'https://ec2-54-69-68-14.us-west-2.compute.amazonaws.com:8443/mifosng-provider/',
+app.constant('APPLICATION', {    
+    'host' : 'https://ec2-54-148-52-34.us-west-2.compute.amazonaws.com/mifosng-provider/',
     'sessionName': 'ang_session',
     'authToken': 'token',
     'username' : 'username',
@@ -16,7 +16,7 @@ app.constant('REST_URL', {
     'TODO_LIST': 'api/v1/loans?tenantIdentifier=default&pretty=true',
     'SAVE_TODO': 'todo/save',
     'DELETE_TODO': 'todo/delete',
-    'ACTIVE_CLIENTS': 'api/v1/clients?tenantIdentifier=default&pretty=true&sqlSearch=status_enum=300',
+    'HEADER_STATISTIC': 'api/v1/runreports/Home page header statistic?tenantIdentifier=default&pretty=true&genericResultSet=false',
 });
 
 app.constant('PAGE_URL', {

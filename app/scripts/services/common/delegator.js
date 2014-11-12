@@ -26,6 +26,7 @@ delegatorServices.factory('Remote', function($http, APPLICATION, Session) {
 	  	},
 	  	post: function(url, jsondata) {
 	  		console.log('Delegator POST :' + APPLICATION.host + url +" -> JSON DATA : "+ jsondata);
+	  		//TODO delete autherization if request id for login
 			//this.setHeader();			
 	  		var promise = $http.post(APPLICATION.host + url, jsondata)
 	  		.success(function (data, status) {

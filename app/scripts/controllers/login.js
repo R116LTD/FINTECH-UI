@@ -15,7 +15,8 @@ LoginCtrl.controller('LoginCtrl', function ($scope, $rootScope,$location, Auth, 
         Auth.setCredentials(loginDetails.username, loginDetails.password);
         AuthService.login(REST_URL.AUTHENTICATION+"?username="+loginDetails.username+"&password="+loginDetails.password).then(function(result){
           console.log('Success : Return from login service.');
-          $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);          
+          $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+          //TODO will delete it later
           //Session.create(result.data.base64EncodedAuthenticationKey, result.data.username, result.data.roles[0]);
           Session.create(Base64.encode(loginDetails.username + ':' + loginDetails.password), result.data.username, result.data.roles[0]);
           $location.url(PAGE_URL.HOME);

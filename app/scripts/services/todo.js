@@ -19,7 +19,7 @@ todoService.factory('TodoService', function($http, Remote) {
                 var promise = Remote.delete(url +"/" + todoId); 
                 return promise;
             },
-            clientList: function(url){
+            headerStatic: function(url){
                 console.log('Get total active clients...');
                 var promise = Remote.get(url);
                 return promise;
